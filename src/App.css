@@ -1,0 +1,204 @@
+/* Reset básico para evitar espaços estranhos */
+/* garante que o site tenha a mesma aparência em todos os navegadores. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* NAVBAR CENTRALIZADA */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-spacer,
+.cart-container {
+  flex: 1;
+}
+
+.navbar h1 {
+  flex: 2;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+.cart-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* HERO SECTION */
+.hero {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* GRID DE PRODUTOS */
+.product-grid {
+  display: grid;
+  /* Cria 3 colunas iguais em telas grandes */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px 5%;
+  max-width: 1200px; /* Limita a largura total */
+  margin: 0 auto; /* Centraliza o grid na página */
+}
+
+/* CARD DE PRODUTO */
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden; /* Garante que a imagem não saia do card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* IMAGEM CONTROLADA */
+.card img {
+  width: 100%; /* Ocupa toda a largura do card */
+  height: 300px; /* Altura fixa para todos os cards ficarem iguais */
+  object-fit: cover; /* Corta a imagem sem esticar */
+}
+
+.card h3 {
+  margin: 15px 0;
+  font-size: 1.2rem;
+}
+
+/* BOTÃO ESTILIZADO */
+.btn-camisetas {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+.btn-tenis {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+.btn-calcas {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn-comprar:hover {
+  background: #333;
+}
+
+.titulos-pagina {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Estilização do container dos títulos */
+.titulos-pagina {
+  text-align: center; /* Centraliza o texto */
+  margin: 40px 0; /* Dá um espaço em cima e embaixo */
+  padding: 20px;
+  background-color: #f9f9f9; /* Um fundo leve para destacar */
+  border-radius: 8px;
+}
+
+/* Estilo específico para o H1 (Nossas Camisetas) */
+.titulos-pagina h1 {
+  font-size: 2.5rem; /* Aumenta o tamanho da fonte */
+  color: #333; /* Cor cinza escuro profissional */
+  text-transform: uppercase; /* Deixa tudo em maiúsculo */
+  letter-spacing: 2px; /* Espaçamento entre as letras */
+  margin-bottom: 10px; /* Espaço para o subtítulo */
+}
+
+/* Estilo específico para o H2 (Confira nossa coleção...) */
+.titulos-pagina h2 {
+  font-size: 1.2rem;
+  color: #666; /* Um cinza mais claro para o subtítulo */
+  font-weight: 300; /* Deixa a letra mais fina/elegante */
+}
+
+.btn-comprar {
+  background: #07e207;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn-voltar {
+  display: inline-flex; /* Alinha ícone e texto */
+  align-items: center;
+  gap: 8px; /* Espaço entre a seta e o texto */
+  background: #222; /* Cor neutra e sofisticada */
+  color: #fff;
+  border: 2px solid #222;
+  padding: 10px 22px;
+  border-radius: 50px; /* Formato pílula (mais moderno) */
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+/* Efeito ao passar o mouse */
+.btn-voltar:hover {
+  background: transparent;
+  color: #222; /* Inverte as cores */
+  transform: translateX(-5px); /* Pequeno movimento para a esquerda */
+}
+
+/* Adicionando uma "setinha" via CSS antes do texto */
+.btn-voltar::before {
+  content: "←"; /* Seta de voltar */
+  font-size: 1.2rem;
+}
