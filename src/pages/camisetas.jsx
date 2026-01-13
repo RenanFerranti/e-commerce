@@ -16,31 +16,35 @@ function Camisetas() {
       nome: "Camiseta lobo feroz",
       preco: "R$ 129,90",
       img: "camiseta2.png",
-      link: "camisetaLobo", // Nova propriedade
+      link: "/camisetaLobo",
     },
     {
       id: 3,
       nome: "Camiseta F1 Malboro",
       preco: "R$ 199,90",
       img: "camiseta3.avif",
+      link: "/camisetaF1",
     },
     {
       id: 4,
       nome: "Camiseta Rio de Janeiro",
       preco: "R$ 69,90",
       img: "camiseta4.jpg",
+      link: "/camisetaRJ",
     },
     {
       id: 5,
       nome: "Camiseta FuelTech Black",
       preco: "R$ 110,00",
       img: "camiseta5.jpg",
+      link: "/camisetaFT",
     },
     {
       id: 6,
       nome: "Camiseta praia",
       preco: "R$ 95,00",
       img: "camiseta6.webp",
+      link: "/camisetaPraia",
     },
   ];
 

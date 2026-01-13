@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function CamisetaInter() {
+function camisetaPraia() {
   return (
     <div
       style={{
@@ -36,7 +36,7 @@ function CamisetaInter() {
           backgroundColor: "#fff",
           borderRadius: "15px",
           display: "flex",
-          flexWrap: "wrap", // Responsividade para celular
+          flexWrap: "wrap",
           overflow: "hidden",
           boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
         }}
@@ -53,8 +53,8 @@ function CamisetaInter() {
           }}
         >
           <img
-            src="/camiseta1.webp"
-            alt="Camiseta Internacional"
+            src="/camiseta6.webp"
+            alt="Camiseta Fuel Tech"
             style={{ width: "100%", maxWidth: "450px", objectFit: "contain" }}
           />
         </div>
@@ -71,18 +71,18 @@ function CamisetaInter() {
         >
           <span
             style={{
-              color: "#e91e63",
+              color: "#d4ff00",
               fontWeight: "bold",
               fontSize: "12px",
               textTransform: "uppercase",
               letterSpacing: "1px",
             }}
           >
-            Coleção Exclusiva
+            Edição Verão
           </span>
 
           <h1 style={{ fontSize: "36px", margin: "10px 0", color: "#1a1a1a" }}>
-            Camiseta Internacional
+            Camiseta Praia
           </h1>
 
           <div
@@ -93,7 +93,7 @@ function CamisetaInter() {
               marginBottom: "20px",
             }}
           >
-            R$ 299,90
+            R$ 95,00
             <span
               style={{
                 fontSize: "14px",
@@ -102,16 +102,17 @@ function CamisetaInter() {
                 marginLeft: "10px",
               }}
             >
-              ou 10x de R$ 29,99
+              ou 2x de R$ 47,50
             </span>
           </div>
 
           <div style={{ borderTop: "1px solid #eee", paddingTop: "20px" }}>
             <h4 style={{ marginBottom: "10px", color: "#555" }}>Descrição</h4>
             <p style={{ lineHeight: "1.6", color: "#666", fontSize: "16px" }}>
-              Camiseta oficial do Sport Club Internacional. Desenvolvida com
-              tecnologia de absorção de suor, proporcionando leveza e frescor
-              seja nas arquibancadas do Beira-Rio ou no dia a dia.
+              Leve a vibe do verão com você onde quer que vá. A Camiseta Praia
+              foi desenhada para quem não abre mão do conforto nos dias mais
+              quentes. Com um tecido de algodão extremamente leve e macio, ela
+              proporciona uma sensação refrescante na pele.
             </p>
           </div>
 
@@ -140,4 +141,4 @@ function CamisetaInter() {
   );
 }
 
-export default CamisetaInter;
+export default camisetaPraia;
