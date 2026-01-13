@@ -9,12 +9,14 @@ function Camisetas() {
       nome: "Camiseta Internacional",
       preco: "R$ 299,90",
       img: "camiseta1.webp",
+      link: "/camisetaInter", // Nova propriedade
     },
     {
       id: 2,
       nome: "Camiseta lobo feroz",
       preco: "R$ 129,90",
       img: "camiseta2.png",
+      link: "camisetaLobo", // Nova propriedade
     },
     {
       id: 3,
@@ -55,7 +57,20 @@ function Camisetas() {
             <img src={p.img} alt={p.nome} />
             <h3>{p.nome}</h3>
             <p className="preco">{p.preco}</p>
-            <button className="btn-comprar">Comprar</button>
+            <Link to={p.link}>
+              <button
+                style={{
+                  backgroundColor: "#00cc00",
+                  color: "white",
+                  padding: "10px",
+                  border: "none",
+                  borderRadius: "5px",
+                  cursor: "pointer",
+                }}
+              >
+                Comprar
+              </button>
+            </Link>
           </div>
         ))}
       </main>

@@ -8,6 +8,8 @@ import Camisetas from "./pages/camisetas";
 import Calcas from "./pages/calcas"; // Variável Maiúscula, arquivo minúsculo
 import Tenis from "./pages/tenis"; // Variável Maiúscula, arquivo minúsculo
 
+import CamisetaInter from "./pages/camisetaInter";
+
 // COMPONENTE DA HOME (Aparece os 3 cards)
 const Home = () => (
   <>
@@ -82,6 +84,7 @@ function App() {
         <Route path="/camisetas" element={<Camisetas />} />{" "}
         <Route path="/calcas" element={<Calcas />} />{" "}
         <Route path="/tenis" element={<Tenis />} />{" "}
+        <Route path="/camisetaInter" element={<CamisetaInter />} />
       </Routes>
     </div>
   );

@@ -35,10 +35,3 @@ export const products = [
     img: "URL_DA_FOTO",
   },
 ];
-
-// Por que o data.js não precisa do "X"?
-// Apenas Dados: O seu arquivo data.js contém apenas informações puras: textos, números e listas (arrays/objetos).
-
-// Sem Interface: Como ele não cria elementos visuais (não tem aquele "HTML" do React), ele é um arquivo JavaScript puro.
-
-// Padrão de Organização: Usar apenas .js ajuda você a bater o olho na pasta e saber: "Este arquivo é só lógica/dados, não é uma tela do site".
