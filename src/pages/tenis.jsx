@@ -8,36 +8,42 @@ function Tenis() {
       nome: "Tenis Fila",
       preco: 200,
       img: "tenis1.webp",
+      link: "/Fila",
     },
     {
       id: 2,
       nome: "Tenis Olympikus",
       preco: 140,
       img: "tenis2.webp",
+      link: "/Olympikus",
     },
     {
       id: 3,
       nome: "Tenis Adidas",
       preco: 200,
       img: "tenis3.webp",
+      link: "/Adidas",
     },
     {
       id: 4,
       nome: "Tenis Nike",
       preco: 200,
       img: "tenis4.jpg",
+      link: "/Nike",
     },
     {
       id: 5,
       nome: "Tenis Vans",
       preco: 200,
       img: "tenis5.jpg",
+      link: "/Vans",
     },
     {
       id: 6,
       nome: "Tenis Hoka",
       preco: 200,
       img: "tenis6.webp",
+      link: "/Hoka",
     },
   ];
 
@@ -53,7 +59,20 @@ function Tenis() {
             <img src={item.img} alt={item.nome} />
             <h3>{item.nome}</h3>
             <p className="preco">R$ {item.preco},00</p>
-            <button className="btn-comprar">Comprar</button>
+            <Link to={item.link}>
+              <button
+                style={{
+                  backgroundColor: "#00cc00",
+                  color: "white",
+                  padding: "10px",
+                  border: "none",
+                  borderRadius: "5px",
+                  cursor: "pointer",
+                }}
+              >
+                Comprar
+              </button>
+            </Link>{" "}
           </div>
         ))}
       </main>

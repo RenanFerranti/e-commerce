@@ -1,7 +1,7 @@
 import React, { useState } from "react"; // Adicionamos o useState aqui
 import { Link } from "react-router-dom";
 
-function CamisetaInter() {
+function Hoka() {
   // Criamos uma variável para guardar o tamanho (P, M, G ou GG)
   const [tamanho, setTamanho] = useState("");
 
@@ -17,7 +17,7 @@ function CamisetaInter() {
       {/* Botão Voltar */}
       <div style={{ maxWidth: "1000px", margin: "0 auto 20px" }}>
         <Link
-          to="/camisetas"
+          to="/tenis"
           style={{
             textDecoration: "none",
             color: "#555",
@@ -55,8 +55,8 @@ function CamisetaInter() {
           }}
         >
           <img
-            src="/camiseta1.webp"
-            alt="Camiseta inter"
+            src="/tenis6.webp"
+            alt="Hoka"
             style={{ width: "100%", maxWidth: "450px", objectFit: "contain" }}
           />
         </div>
@@ -72,7 +72,7 @@ function CamisetaInter() {
           }}
         >
           <h1 style={{ fontSize: "36px", margin: "10px 0", color: "#1a1a1a" }}>
-            Camiseta Internacional
+            Tenis Hoka
           </h1>
           <div
             style={{
@@ -82,17 +82,18 @@ function CamisetaInter() {
               marginBottom: "20px",
             }}
           >
-            R$ 299,90
+            R$ 200,00
           </div>
 
           <div style={{ borderTop: "1px solid #eee", paddingTop: "20px" }}>
             <h4 style={{ color: "#555" }}>Descrição</h4>
             <p style={{ color: "#666" }}>
-              Sinta o orgulho de vestir as cores que dominam o Gigante da
-              Beira-Rio. Nossa camiseta do Inter é feita para quem carrega a
-              paixão colorada no peito, seja na arquibancada ou no dia a dia.
-              Com o escudo icônico em destaque, ela é o símbolo máximo de uma
-              história de glórias e de uma torcida que nunca abandona.
+              Descubra a sensação de voar sobre a terra com o Hoka. Projetado
+              para oferecer o máximo de proteção contra impactos, sua entressola
+              volumosa garante um amortecimento macio sem sacrificar a leveza. A
+              geometria Meta-Rocker impulsiona cada passada, tornando a
+              transição mais fluida e eficiente, seja no asfalto ou em trilhas
+              técnicas.
             </p>
           </div>
 
@@ -103,48 +104,48 @@ function CamisetaInter() {
             </p>
             <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
               <button
-                onClick={() => setTamanho("P")}
+                onClick={() => setTamanho("38")}
                 style={{
                   padding: "10px",
                   cursor: "pointer",
                   border:
-                    tamanho === "P" ? "2px solid green" : "1px solid #ccc",
+                    tamanho === "38" ? "2px solid green" : "1px solid #ccc",
                 }}
               >
-                P
+                38
               </button>
               <button
-                onClick={() => setTamanho("M")}
+                onClick={() => setTamanho("39")}
                 style={{
                   padding: "10px",
                   cursor: "pointer",
                   border:
-                    tamanho === "M" ? "2px solid green" : "1px solid #ccc",
+                    tamanho === "39" ? "2px solid green" : "1px solid #ccc",
                 }}
               >
-                M
+                39
               </button>
               <button
-                onClick={() => setTamanho("G")}
+                onClick={() => setTamanho("40")}
                 style={{
                   padding: "10px",
                   cursor: "pointer",
                   border:
-                    tamanho === "G" ? "2px solid green" : "1px solid #ccc",
+                    tamanho === "40" ? "2px solid green" : "1px solid #ccc",
                 }}
               >
-                G
+                40
               </button>
               <button
-                onClick={() => setTamanho("GG")}
+                onClick={() => setTamanho("41")}
                 style={{
                   padding: "10px",
                   cursor: "pointer",
                   border:
-                    tamanho === "GG" ? "2px solid green" : "1px solid #ccc",
+                    tamanho === "41" ? "2px solid green" : "1px solid #ccc",
                 }}
               >
-                GG
+                41
               </button>
             </div>
           </div>
@@ -178,4 +179,4 @@ function CamisetaInter() {
   );
 }
 
-export default CamisetaInter;
+export default Hoka;

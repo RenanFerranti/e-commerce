@@ -1,7 +1,7 @@
 import React, { useState } from "react"; // Adicionamos o useState aqui
 import { Link } from "react-router-dom";
 
-function CamisetaInter() {
+function CalcaPreta() {
   // Criamos uma variável para guardar o tamanho (P, M, G ou GG)
   const [tamanho, setTamanho] = useState("");
 
@@ -17,7 +17,7 @@ function CamisetaInter() {
       {/* Botão Voltar */}
       <div style={{ maxWidth: "1000px", margin: "0 auto 20px" }}>
         <Link
-          to="/camisetas"
+          to="/calcas"
           style={{
             textDecoration: "none",
             color: "#555",
@@ -55,8 +55,8 @@ function CamisetaInter() {
           }}
         >
           <img
-            src="/camiseta1.webp"
-            alt="Camiseta inter"
+            src="/calca1.webp"
+            alt="Calça Preta Slim"
             style={{ width: "100%", maxWidth: "450px", objectFit: "contain" }}
           />
         </div>
@@ -72,7 +72,7 @@ function CamisetaInter() {
           }}
         >
           <h1 style={{ fontSize: "36px", margin: "10px 0", color: "#1a1a1a" }}>
-            Camiseta Internacional
+            Calça Preta Slim Fit
           </h1>
           <div
             style={{
@@ -82,17 +82,14 @@ function CamisetaInter() {
               marginBottom: "20px",
             }}
           >
-            R$ 299,90
+            R$ 149,90
           </div>
 
           <div style={{ borderTop: "1px solid #eee", paddingTop: "20px" }}>
             <h4 style={{ color: "#555" }}>Descrição</h4>
             <p style={{ color: "#666" }}>
-              Sinta o orgulho de vestir as cores que dominam o Gigante da
-              Beira-Rio. Nossa camiseta do Inter é feita para quem carrega a
-              paixão colorada no peito, seja na arquibancada ou no dia a dia.
-              Com o escudo icônico em destaque, ela é o símbolo máximo de uma
-              história de glórias e de uma torcida que nunca abandona.
+              Calça com corte Slim Fit que se ajusta ao corpo. Conforto e
+              elegância.
             </p>
           </div>
 
@@ -178,4 +175,4 @@ function CamisetaInter() {
   );
 }
 
-export default CamisetaInter;
+export default CalcaPreta;

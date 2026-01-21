@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react"; // Adicionamos o useState aqui
 import { Link } from "react-router-dom";
 
 function CamisetaF1() {
+  // Criamos uma variável para guardar o tamanho (P, M, G ou GG)
+  const [tamanho, setTamanho] = useState("");
+
   return (
     <div
       style={{
@@ -11,7 +14,7 @@ function CamisetaF1() {
         fontFamily: "'Segoe UI', Roboto, sans-serif",
       }}
     >
-      {/* Botão Voltar Refinado */}
+      {/* Botão Voltar */}
       <div style={{ maxWidth: "1000px", margin: "0 auto 20px" }}>
         <Link
           to="/camisetas"
@@ -28,7 +31,7 @@ function CamisetaF1() {
         </Link>
       </div>
 
-      {/* Container Principal do Produto */}
+      {/* Container Principal */}
       <div
         style={{
           maxWidth: "1000px",
@@ -41,11 +44,10 @@ function CamisetaF1() {
           boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
         }}
       >
-        {/* Lado Esquerdo: Imagem */}
+        {/* Imagem */}
         <div
           style={{
             flex: "1 1 400px",
-            backgroundColor: "#fff",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -54,12 +56,12 @@ function CamisetaF1() {
         >
           <img
             src="/camiseta3.avif"
-            alt="Camiseta F1 Malboro"
+            alt="Camiseta F1"
             style={{ width: "100%", maxWidth: "450px", objectFit: "contain" }}
           />
         </div>
 
-        {/* Lado Direito: Informações */}
+        {/* Informações */}
         <div
           style={{
             flex: "1 1 400px",
@@ -69,22 +71,9 @@ function CamisetaF1() {
             justifyContent: "center",
           }}
         >
-          <span
-            style={{
-              color: "#e7ef0c",
-              fontWeight: "bold",
-              fontSize: "12px",
-              textTransform: "uppercase",
-              letterSpacing: "1px",
-            }}
-          >
-            Edição Vintage Racing
-          </span>
-
           <h1 style={{ fontSize: "36px", margin: "10px 0", color: "#1a1a1a" }}>
             Camiseta F1 Malboro
           </h1>
-
           <div
             style={{
               fontSize: "28px",
@@ -94,27 +83,73 @@ function CamisetaF1() {
             }}
           >
             R$ 199,90
-            <span
-              style={{
-                fontSize: "14px",
-                color: "#888",
-                fontWeight: "normal",
-                marginLeft: "10px",
-              }}
-            >
-              ou 10x de R$ 19,99
-            </span>
           </div>
 
           <div style={{ borderTop: "1px solid #eee", paddingTop: "20px" }}>
-            <h4 style={{ marginBottom: "10px", color: "#555" }}>Descrição</h4>
-            <p style={{ lineHeight: "1.6", color: "#666", fontSize: "16px" }}>
-              Reviva a era de ouro do automobilismo com a Camiseta F1 Malboro.
-              Com um design retrô inspirado nas pistas clássicas, esta peça
-              combina nostalgia e estilo urbano. Confeccionada em tecido premium
-              para garantir o máximo conforto.
+            <h4 style={{ color: "#555" }}>Descrição</h4>
+            <p style={{ color: "#666" }}>
+              Reviva a emoção dos anos 80 e 90 com nossa camiseta inspirada na
+              icônica pintura Marlboro. Um tributo aos grandes nomes das pistas
+              e à estética que definiu uma geração do automobilismo. Com design
+              vintage e visual "faded", é a peça perfeita para quem respira a
+              história da Fórmula 1 e admira o legado de lendas como Ayrton
+              Senna e Alain Prost.
             </p>
           </div>
+
+          {/* --- ESCOLHA DE TAMANHO BÁSICA --- */}
+          <div style={{ marginTop: "20px" }}>
+            <p>
+              <strong>Selecione o tamanho:</strong> {tamanho}
+            </p>
+            <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
+              <button
+                onClick={() => setTamanho("P")}
+                style={{
+                  padding: "10px",
+                  cursor: "pointer",
+                  border:
+                    tamanho === "P" ? "2px solid green" : "1px solid #ccc",
+                }}
+              >
+                P
+              </button>
+              <button
+                onClick={() => setTamanho("M")}
+                style={{
+                  padding: "10px",
+                  cursor: "pointer",
+                  border:
+                    tamanho === "M" ? "2px solid green" : "1px solid #ccc",
+                }}
+              >
+                M
+              </button>
+              <button
+                onClick={() => setTamanho("G")}
+                style={{
+                  padding: "10px",
+                  cursor: "pointer",
+                  border:
+                    tamanho === "G" ? "2px solid green" : "1px solid #ccc",
+                }}
+              >
+                G
+              </button>
+              <button
+                onClick={() => setTamanho("GG")}
+                style={{
+                  padding: "10px",
+                  cursor: "pointer",
+                  border:
+                    tamanho === "GG" ? "2px solid green" : "1px solid #ccc",
+                }}
+              >
+                GG
+              </button>
+            </div>
+          </div>
+          {/* ---------------------------------- */}
 
           <button
             style={{
@@ -127,11 +162,14 @@ function CamisetaF1() {
               borderRadius: "8px",
               cursor: "pointer",
               marginTop: "30px",
-              transition: "all 0.3s ease",
-              boxShadow: "0 4px 15px rgba(46, 204, 113, 0.3)",
             }}
-            onMouseOver={(e) => (e.target.style.backgroundColor = "#27ae60")}
-            onMouseOut={(e) => (e.target.style.backgroundColor = "#2ecc71")}
+            onClick={() =>
+              alert(
+                tamanho
+                  ? "Comprado tamanho: " + tamanho
+                  : "Selecione um tamanho!",
+              )
+            }
           >
             FINALIZAR COMPRA
           </button>

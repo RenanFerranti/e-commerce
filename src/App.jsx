@@ -14,6 +14,18 @@ import CamisetaF1 from "./pages/camisetaF1";
 import CamisetaRJ from "./pages/camisetaRJ";
 import CamisetaFT from "./pages/camisetaFT";
 import CamisetaPraia from "./pages/camisetaPraia";
+import CalcaPreta from "./pages/calcaPreta";
+import CalcaCargo from "./pages/calcaCargo";
+import CalcaMarrom from "./pages/calcaMarrom";
+import CalcaJeans from "./pages/calcaJeans";
+import CalcaRasgada from "./pages/calcaRasgada";
+import CalcaCinza from "./pages/calcaCinza";
+import Fila from "./pages/Fila";
+import Olympikus from "./pages/Olympikus";
+import Adidas from "./pages/Adidas";
+import Nike from "./pages/Nike";
+import Vans from "./pages/Vans";
+import Hoka from "./pages/Hoka";
 
 // COMPONENTE DA HOME (Aparece os 3 cards)
 const Home = () => (
@@ -96,6 +108,18 @@ function App() {
         <Route path="/camisetaRJ" element={<CamisetaRJ />} />
         <Route path="/camisetaFT" element={<CamisetaFT />} />
         <Route path="/camisetaPraia" element={<CamisetaPraia />} />
+        <Route path="/calcaPreta" element={<CalcaPreta />} />
+        <Route path="/calcaCargo" element={<CalcaCargo />} />
+        <Route path="/calcaMarrom" element={<CalcaMarrom />} />
+        <Route path="/calcaJeans" element={<CalcaJeans />} />
+        <Route path="/calcaRasgada" element={<CalcaRasgada />} />
+        <Route path="/calcaCinza" element={<CalcaCinza />} />
+        <Route path="/Fila" element={<Fila />} />
+        <Route path="/Olympikus" element={<Olympikus />} />
+        <Route path="/Adidas" element={<Adidas />} />
+        <Route path="/Nike" element={<Nike />} />
+        <Route path="/Vans" element={<Vans />} />
+        <Route path="/Hoka" element={<Hoka />} />
       </Routes>
     </div>
   );

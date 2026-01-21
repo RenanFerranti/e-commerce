@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react"; // Adicionamos o useState aqui
 import { Link } from "react-router-dom";
 
-function camisetaRJ() {
+function CamisetaRJ() {
+  // Criamos uma variável para guardar o tamanho (P, M, G ou GG)
+  const [tamanho, setTamanho] = useState("");
+
   return (
     <div
       style={{
@@ -11,7 +14,7 @@ function camisetaRJ() {
         fontFamily: "'Segoe UI', Roboto, sans-serif",
       }}
     >
-      {/* Botão Voltar Refinado */}
+      {/* Botão Voltar */}
       <div style={{ maxWidth: "1000px", margin: "0 auto 20px" }}>
         <Link
           to="/camisetas"
@@ -28,7 +31,7 @@ function camisetaRJ() {
         </Link>
       </div>
 
-      {/* Container Principal do Produto */}
+      {/* Container Principal */}
       <div
         style={{
           maxWidth: "1000px",
@@ -41,11 +44,10 @@ function camisetaRJ() {
           boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
         }}
       >
-        {/* Lado Esquerdo: Imagem */}
+        {/* Imagem */}
         <div
           style={{
             flex: "1 1 400px",
-            backgroundColor: "#fff",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -54,12 +56,12 @@ function camisetaRJ() {
         >
           <img
             src="/camiseta4.jpg"
-            alt="Camiseta Rio de Janeiro"
+            alt="Camiseta RJ"
             style={{ width: "100%", maxWidth: "450px", objectFit: "contain" }}
           />
         </div>
 
-        {/* Lado Direito: Informações */}
+        {/* Informações */}
         <div
           style={{
             flex: "1 1 400px",
@@ -69,22 +71,9 @@ function camisetaRJ() {
             justifyContent: "center",
           }}
         >
-          <span
-            style={{
-              color: "#a52020",
-              fontWeight: "bold",
-              fontSize: "12px",
-              textTransform: "uppercase",
-              letterSpacing: "1px",
-            }}
-          >
-            Edição Verão no Rio
-          </span>
-
           <h1 style={{ fontSize: "36px", margin: "10px 0", color: "#1a1a1a" }}>
             Camiseta Rio de Janeiro
           </h1>
-
           <div
             style={{
               fontSize: "28px",
@@ -93,27 +82,73 @@ function camisetaRJ() {
               marginBottom: "20px",
             }}
           >
-            R$ 69,90
-            <span
-              style={{
-                fontSize: "14px",
-                color: "#888",
-                fontWeight: "normal",
-                marginLeft: "10px",
-              }}
-            >
-              ou 2x de R$ 34,95
-            </span>
+            R$ 99,90
           </div>
 
           <div style={{ borderTop: "1px solid #eee", paddingTop: "20px" }}>
-            <h4 style={{ marginBottom: "10px", color: "#555" }}>Descrição</h4>
-            <p style={{ lineHeight: "1.6", color: "#666", fontSize: "16px" }}>
-              Sinta a alma carioca com a Camiseta Rio de Janeiro. Esta peça une
-              o estilo urbano à descontração da Cidade Maravilhosa, apresentando
-              um design minimalista que celebra a energia do Rio.
+            <h4 style={{ color: "#555" }}>Descrição</h4>
+            <p style={{ color: "#666" }}>
+              Leve a energia da Cidade Maravilhosa com você onde quer que vá.
+              Nossa camiseta celebra o lifestyle carioca com um design que une o
+              calçadão de Copacabana ao pôr do sol do Arpoador. Feita em tecido
+              leve e respirável, é a peça ideal para quem busca o máximo de
+              conforto sem perder o borogodó e a ginga que só o Rio tem.
             </p>
           </div>
+
+          {/* --- ESCOLHA DE TAMANHO BÁSICA --- */}
+          <div style={{ marginTop: "20px" }}>
+            <p>
+              <strong>Selecione o tamanho:</strong> {tamanho}
+            </p>
+            <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
+              <button
+                onClick={() => setTamanho("P")}
+                style={{
+                  padding: "10px",
+                  cursor: "pointer",
+                  border:
+                    tamanho === "P" ? "2px solid green" : "1px solid #ccc",
+                }}
+              >
+                P
+              </button>
+              <button
+                onClick={() => setTamanho("M")}
+                style={{
+                  padding: "10px",
+                  cursor: "pointer",
+                  border:
+                    tamanho === "M" ? "2px solid green" : "1px solid #ccc",
+                }}
+              >
+                M
+              </button>
+              <button
+                onClick={() => setTamanho("G")}
+                style={{
+                  padding: "10px",
+                  cursor: "pointer",
+                  border:
+                    tamanho === "G" ? "2px solid green" : "1px solid #ccc",
+                }}
+              >
+                G
+              </button>
+              <button
+                onClick={() => setTamanho("GG")}
+                style={{
+                  padding: "10px",
+                  cursor: "pointer",
+                  border:
+                    tamanho === "GG" ? "2px solid green" : "1px solid #ccc",
+                }}
+              >
+                GG
+              </button>
+            </div>
+          </div>
+          {/* ---------------------------------- */}
 
           <button
             style={{
@@ -126,11 +161,14 @@ function camisetaRJ() {
               borderRadius: "8px",
               cursor: "pointer",
               marginTop: "30px",
-              transition: "all 0.3s ease",
-              boxShadow: "0 4px 15px rgba(46, 204, 113, 0.3)",
             }}
-            onMouseOver={(e) => (e.target.style.backgroundColor = "#27ae60")}
-            onMouseOut={(e) => (e.target.style.backgroundColor = "#2ecc71")}
+            onClick={() =>
+              alert(
+                tamanho
+                  ? "Comprado tamanho: " + tamanho
+                  : "Selecione um tamanho!",
+              )
+            }
           >
             FINALIZAR COMPRA
           </button>
@@ -140,4 +178,4 @@ function camisetaRJ() {
   );
 }
 
-export default camisetaRJ;
+export default CamisetaRJ;
