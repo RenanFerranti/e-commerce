@@ -202,3 +202,59 @@
   content: "←"; /* Seta de voltar */
   font-size: 1.2rem;
 }
+
+/* Container que envolve o input e o botão */
+.frete-container {
+  margin: 20px 0;
+  font-family: sans-serif;
+}
+
+.frete-container h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+/* Grupo que mantém input e botão na mesma linha */
+.frete-input-group {
+  display: flex;
+  gap: 0; /* Vamos grudar o botão no input para um visual moderno */
+}
+
+/* Estilo do Campo de Texto */
+.frete-input-group input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-right: none; /* Remove a borda direita para colar no botão */
+  border-radius: 4px 0 0 4px; /* Arredonda só os cantos da esquerda */
+  outline: none;
+  width: 150px;
+  font-size: 14px;
+}
+
+/* Estilo do Botão Calcular */
+.frete-input-group button {
+  padding: 10px 20px;
+  background-color: #f8f8f8; /* Fundo clarinho como os botões de tamanho */
+  border: 1px solid #ccc;
+  border-radius: 0 4px 4px 0; /* Arredonda só os cantos da direita */
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.frete-input-group button:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* Estilo do texto de resultado */
+.resultado-frete {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #444;
+}

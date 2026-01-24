@@ -149,6 +149,8 @@ function Fila() {
               </button>
             </div>
           </div>
+                    <h5 style={{ color: "#888888" }}>Estoque disponível!</h5>
+
           {/* ---------------------------------- */}
 
           <button

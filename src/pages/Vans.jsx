@@ -84,7 +84,6 @@ function Vans() {
           >
             R$ 200,00
           </div>
-
           <div style={{ borderTop: "1px solid #eee", paddingTop: "20px" }}>
             <h4 style={{ color: "#555" }}>Descrição</h4>
             <p style={{ color: "#666" }}>
@@ -96,7 +95,6 @@ function Vans() {
               a atitude está garantida.
             </p>
           </div>
-
           {/* --- ESCOLHA DE TAMANHO BÁSICA --- */}
           <div style={{ marginTop: "20px" }}>
             <p>
@@ -149,8 +147,12 @@ function Vans() {
               </button>
             </div>
           </div>
+          <h5 style={{ color: "#888888" }}>Estoque disponível!</h5>
+          const [cep, setCep] = useState("");
+         
+         
+         
           {/* ---------------------------------- */}
-
           <button
             style={{
               backgroundColor: "#2ecc71",

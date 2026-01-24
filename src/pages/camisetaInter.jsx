@@ -1,5 +1,6 @@
 import React, { useState } from "react"; // Adicionamos o useState aqui
 import { Link } from "react-router-dom";
+import CalculadorFrete from "../components/CalculadorFrete";
 
 function CamisetaInter() {
   // Criamos uma variável para guardar o tamanho (P, M, G ou GG)
@@ -56,7 +57,7 @@ function CamisetaInter() {
         >
           <img
             src="/camiseta1.webp"
-            alt="Camiseta inter"
+            alt="Camiseta Inter"
             style={{ width: "100%", maxWidth: "450px", objectFit: "contain" }}
           />
         </div>
@@ -88,11 +89,11 @@ function CamisetaInter() {
           <div style={{ borderTop: "1px solid #eee", paddingTop: "20px" }}>
             <h4 style={{ color: "#555" }}>Descrição</h4>
             <p style={{ color: "#666" }}>
-              Sinta o orgulho de vestir as cores que dominam o Gigante da
-              Beira-Rio. Nossa camiseta do Inter é feita para quem carrega a
-              paixão colorada no peito, seja na arquibancada ou no dia a dia.
-              Com o escudo icônico em destaque, ela é o símbolo máximo de uma
-              história de glórias e de uma torcida que nunca abandona.
+              A camisa oficial do Internacional 25/26, produzida pela Adidas,
+              destaca-se pela cor vermelha predominante, tecnologia AEROREADY
+              para controle de umidade, e uso de 100% de materiais reciclados. O
+              design inclui gola V, escudo bordado, tecido leve e respirável,
+              ideal para torcedores.
             </p>
           </div>
 
@@ -148,6 +149,9 @@ function CamisetaInter() {
               </button>
             </div>
           </div>
+
+          <CalculadorFrete />
+
           {/* ---------------------------------- */}
 
           <button

@@ -1,5 +1,6 @@
 import React, { useState } from "react"; // Adicionamos o useState aqui
 import { Link } from "react-router-dom";
+import CalculadorFrete from "../components/CalculadorFrete";
 
 function CamisetaLobo() {
   // Criamos uma variável para guardar o tamanho (P, M, G ou GG)
@@ -148,6 +149,9 @@ function CamisetaLobo() {
               </button>
             </div>
           </div>
+
+          <CalculadorFrete />
+
           {/* ---------------------------------- */}
 
           <button
